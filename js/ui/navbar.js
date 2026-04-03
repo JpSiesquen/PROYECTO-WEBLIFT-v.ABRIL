@@ -52,6 +52,9 @@ const NavbarUI = {
       }
     };
 
+    // Conectar el botón al manejador de clic
+    btn.addEventListener("click", window.toggleMenu);
+
     // Cerrar menú al hacer clic en cualquier link (esencial para One-Page)
     links.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => {
