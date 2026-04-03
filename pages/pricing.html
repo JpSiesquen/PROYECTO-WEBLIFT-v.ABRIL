@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Precios de WEBLIFT Studio — Planes claros sin sorpresas para diseño web en Perú."/>
+  <title>Precios — WEBLIFT Studio</title>
+  <link rel="stylesheet" href="../assets/css/global.css"/>
+  <link rel="stylesheet" href="../assets/css/navbar.css"/>
+  <link rel="stylesheet" href="../assets/css/pricing.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="scrolled">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img"/>
+    WEB<span>LIFT</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="home.html">Inicio</a></li>
+    <li><a href="services.html">Servicios</a></li>
+    <li><a href="portfolio.html">Portafolio</a></li>
+    <li><a href="pricing.html" class="active">Precios</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+  </ul>
+  <div class="nav-auth">
+    <a href="login.html" class="nav-btn-login" id="navLogin">Ingresar</a>
+    <a href="register.html" class="nav-btn-cta" id="navRegister">Cotizar gratis</a>
+    <div style="position:relative;">
+      <div class="nav-user" id="navUser" style="display:none;">
+        <div class="nav-user-avatar" id="navAvatar">U</div>
+        <span class="nav-user-name" id="navUserName">Mi cuenta</span>
+      </div>
+      <div class="nav-user-dropdown" id="navDropdown">
+        <a href="contact.html">📋 Nueva cotización</a>
+        <button class="logout-btn" id="navLogout">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content container">
+    <div class="section-tag">Planes y Precios</div>
+    <h1>Inversión <em>clara</em> desde el primer día</h1>
+    <p>Precios transparentes en soles peruanos. Sin costos ocultos, sin sorpresas. Hosting gestionado incluido el primer año en todos los planes.</p>
+  </div>
+</section>
+
+<!-- PRECIOS PRINCIPALES -->
+<section id="pricing-main">
+  <div class="container">
+
+    <div class="pricing-full-grid">
+
+      <!-- Plan Landing Page -->
+      <div class="pricing-full-card reveal reveal-delay-1">
+        <div class="pricing-full-name">Landing Page</div>
+        <div class="pricing-full-tagline">Para campañas y lanzamientos de productos</div>
+
+        <div class="pricing-amount-block">
+          <div class="pricing-main-price">S/. 600 <small>único</small></div>
+          <div class="pricing-sub">+ S/. 250/año hosting desde el 2do año</div>
+        </div>
+
+        <div class="pricing-full-features">
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>1 página de alta conversión</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Diseño personalizado con tu marca</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Versión mobile 100% optimizada</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Formulario o botón WhatsApp</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Google Analytics integrado</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Hosting gestionado 1 año</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Certificado SSL incluido</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Dominio .com o .pe incluido</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>30 días soporte post-entrega</span></div>
+          <div class="pricing-full-feature dimmed"><div class="feature-check">—</div><span>SEO básico on-page</span></div>
+          <div class="pricing-full-feature dimmed"><div class="feature-check">—</div><span>Múltiples secciones</span></div>
+        </div>
+
+        <div style="text-align:center;font-size:0.78rem;color:var(--text-body);margin-bottom:1rem;">⏱ Entrega: 7 – 10 días hábiles</div>
+        <button class="btn-pricing btn-pricing-outline" onclick="window.location.href='contact.html'">
+          Empezar ahora
+        </button>
+      </div>
+
+      <!-- Plan Web Corporativa (popular) -->
+      <div class="pricing-full-card popular reveal reveal-delay-2">
+        <div class="popular-label">⭐ Más popular</div>
+        <div class="pricing-full-name">Web Corporativa</div>
+        <div class="pricing-full-tagline">Presencia digital completa para tu empresa</div>
+
+        <div class="pricing-amount-block">
+          <div class="pricing-main-price">S/. 1,800 <small>único</small></div>
+          <div class="pricing-sub">+ S/. 400/año hosting desde el 2do año</div>
+        </div>
+
+        <div class="pricing-full-features">
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Hasta 6 secciones personalizadas</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Diseño premium a medida</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Mobile, tablet y desktop</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>SEO básico on-page</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Formulario de contacto</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Integración redes sociales</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Google Analytics y Maps</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Hosting gestionado 1 año</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Certificado SSL incluido</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Dominio incluido el primer año</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>30 días soporte post-entrega</span></div>
+        </div>
+
+        <div style="text-align:center;font-size:0.78rem;color:var(--text-muted);margin-bottom:1rem;">⏱ Entrega: 15 – 20 días hábiles</div>
+        <button class="btn-pricing btn-pricing-solid" onclick="window.location.href='contact.html'">
+          Quiero este plan
+        </button>
+      </div>
+
+      <!-- Plan Mantenimiento -->
+      <div class="pricing-full-card reveal reveal-delay-3">
+        <div class="pricing-full-name">Mantenimiento</div>
+        <div class="pricing-full-tagline">Para webs existentes que necesitan cuidado técnico</div>
+
+        <div class="pricing-amount-block">
+          <div class="pricing-main-price">S/. 150 <small>/mes</small></div>
+          <div class="pricing-sub">Sin contrato mínimo · Cancela cuando quieras</div>
+        </div>
+
+        <div class="pricing-full-features">
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Gestión y renovación del hosting</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Backups automáticos diarios</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Actualizaciones de seguridad</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Monitoreo de uptime 24/7</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Soporte técnico prioritario</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>2 cambios de contenido por mes</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Reporte mensual de métricas</span></div>
+          <div class="pricing-full-feature"><div class="feature-check">✓</div><span>Renovación SSL automática</span></div>
+          <div class="pricing-full-feature dimmed"><div class="feature-check">—</div><span>Cambios de diseño mayores</span></div>
+          <div class="pricing-full-feature dimmed"><div class="feature-check">—</div><span>Nuevas secciones o páginas</span></div>
+        </div>
+
+        <div style="text-align:center;font-size:0.78rem;color:var(--text-body);margin-bottom:1rem;">📅 Activación inmediata</div>
+        <button class="btn-pricing btn-pricing-outline" onclick="window.location.href='contact.html'">
+          Contratar soporte
+        </button>
+      </div>
+
+    </div>
+
+    <p class="pricing-footer-note reveal">
+      ¿Tienes un proyecto especial o necesitas algo personalizado?
+      <a href="contact.html">Escríbenos y te hacemos una cotización a medida →</a>
+    </p>
+  </div>
+</section>
+
+<!-- SERVICIOS ADICIONALES (ADD-ONS) -->
+<section id="pricing-addons">
+  <div class="container">
+    <div class="addons-header reveal">
+      <div class="section-tag">Servicios Adicionales</div>
+      <h2>Mejora tu proyecto con estos extras</h2>
+      <p style="color:var(--text-body);font-size:0.95rem;margin-top:0.75rem;line-height:1.75;">Puedes agregar cualquiera de estos servicios a tu plan principal.</p>
+    </div>
+    <div class="addons-grid">
+      <div class="addon-card reveal reveal-delay-1">
+        <div class="addon-icon">📝</div>
+        <h3>Redacción de textos (Copywriting)</h3>
+        <p>Escribimos los textos de tu web enfocados en convencer y vender. Titulares, descripciones y llamadas a la acción.</p>
+        <div class="addon-price">Desde S/. 200</div>
+      </div>
+      <div class="addon-card reveal reveal-delay-2">
+        <div class="addon-icon">🎨</div>
+        <h3>Diseño de logo básico</h3>
+        <p>Si no tienes logo, diseñamos uno profesional y minimalista que represente tu marca.</p>
+        <div class="addon-price">Desde S/. 300</div>
+      </div>
+      <div class="addon-card reveal reveal-delay-3">
+        <div class="addon-icon">📊</div>
+        <h3>Configuración de Google Ads</h3>
+        <p>Creamos y configuramos tu primera campaña de Google Ads para que aproveches al máximo tu landing page.</p>
+        <div class="addon-price">Desde S/. 350</div>
+      </div>
+      <div class="addon-card reveal reveal-delay-1">
+        <div class="addon-icon">📸</div>
+        <h3>Banco de imágenes premium</h3>
+        <p>Seleccionamos y licenciamos imágenes profesionales de alta calidad para tu web.</p>
+        <div class="addon-price">S/. 80</div>
+      </div>
+      <div class="addon-card reveal reveal-delay-2">
+        <div class="addon-icon">🔍</div>
+        <h3>SEO avanzado on-page</h3>
+        <p>Optimización completa para Google: keywords, meta tags, schema markup y velocidad avanzada.</p>
+        <div class="addon-price">Desde S/. 250</div>
+      </div>
+      <div class="addon-card reveal reveal-delay-3">
+        <div class="addon-icon">📱</div>
+        <h3>Integración con WhatsApp Business</h3>
+        <p>Chat flotante de WhatsApp, respuestas automáticas y catálogo de productos integrado.</p>
+        <div class="addon-price">S/. 150</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA -->
+<section id="pricing-guarantee">
+  <div class="container">
+    <div class="guarantee-inner reveal">
+      <div class="guarantee-icon-wrap">🛡️</div>
+      <div class="guarantee-text">
+        <h3>Nuestra garantía de satisfacción</h3>
+        <p>Si no quedas satisfecho con el diseño final después de las 2 rondas de revisión incluidas, te devolvemos el 50% del anticipo sin preguntas. Trabajamos hasta que estés 100% conforme con tu web. Llevamos más de 30 proyectos entregados y ningún cliente se ha ido insatisfecho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="pricing-cta">
+  <div class="container">
+    <div class="pricing-cta-inner reveal">
+      <div class="section-tag center-tag" style="color:var(--blue-hover);">
+        <span style="background:var(--blue-hover);display:block;width:24px;height:2px;"></span>
+        Sin compromiso
+      </div>
+      <h2>¿Listo para invertir en tu presencia digital?</h2>
+      <p>Cotización gratuita y personalizada en menos de 24 horas.</p>
+      <div class="pricing-cta-btns">
+        <a href="contact.html" class="btn-primary">Solicitar cotización gratis</a>
+        <a href="https://wa.me/51999999999?text=Hola%20WEBLIFT,%20quiero%20cotizar" target="_blank" class="btn-secondary">
+          💬 Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo footer-logo">
+          <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img" style="height:28px;"/>
+          WEB<span>LIFT</span>
+        </a>
+        <p>Agencia peruana de diseño y desarrollo web. Hosting incluido en cada proyecto.</p>
+      </div>
+      <div class="footer-col"><h4>Servicios</h4><ul>
+        <li><a href="services.html">Landing Pages</a></li>
+        <li><a href="services.html">Webs Corporativas</a></li>
+        <li><a href="services.html">Mantenimiento</a></li>
+        <li><a href="contact.html">Cotización gratis</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul>
+        <li><a href="home.html#about">Quiénes somos</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="portfolio.html">Portafolio</a></li>
+        <li><a href="home.html#testimonials">Testimonios</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul>
+        <li><a href="mailto:hola@weblift.studio">hola@weblift.studio</a></li>
+        <li><a href="https://wa.me/51999999999" target="_blank">WhatsApp</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 WEBLIFT Studio. Todos los derechos reservados. Lima, Perú.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">IG</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="https://wa.me/51999999999" class="social-btn">WA</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../js/config/firebase-config.js"></script>
+<script src="../js/services/auth-service.js"></script>
+<!-- UI — en este orden exacto -->
+<script src="../js/ui/intro.js"></script>
+<script src="../js/ui/navbar.js"></script>
+<script src="../js/ui/animations.js"></script>
+<script src="../js/ui/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portafolio de WEBLIFT Studio — Proyectos de diseño y desarrollo web en Perú."/>
+  <title>Portafolio — WEBLIFT Studio</title>
+  <link rel="stylesheet" href="../assets/css/global.css"/>
+  <link rel="stylesheet" href="../assets/css/navbar.css"/>
+  <link rel="stylesheet" href="../assets/css/portfolio.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="scrolled">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img"/>
+    WEB<span>LIFT</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="home.html">Inicio</a></li>
+    <li><a href="services.html">Servicios</a></li>
+    <li><a href="portfolio.html" class="active">Portafolio</a></li>
+    <li><a href="pricing.html">Precios</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+  </ul>
+  <div class="nav-auth">
+    <a href="login.html" class="nav-btn-login" id="navLogin">Ingresar</a>
+    <a href="register.html" class="nav-btn-cta" id="navRegister">Cotizar gratis</a>
+    <div style="position:relative;">
+      <div class="nav-user" id="navUser" style="display:none;">
+        <div class="nav-user-avatar" id="navAvatar">U</div>
+        <span class="nav-user-name" id="navUserName">Mi cuenta</span>
+      </div>
+      <div class="nav-user-dropdown" id="navDropdown">
+        <a href="contact.html">📋 Nueva cotización</a>
+        <button class="logout-btn" id="navLogout">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content container">
+    <div class="section-tag">Nuestro Trabajo</div>
+    <h1>Proyectos que <em>hablan</em> por nosotros</h1>
+    <p>Cada proyecto es una historia de éxito. Webs diseñadas para vender, no solo para verse bien.</p>
+  </div>
+</section>
+
+<!-- ESTADÍSTICAS -->
+<div id="portfolio-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-number">+30<span>.</span></div>
+        <div class="stat-label">Proyectos entregados</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-number">100<span>%</span></div>
+        <div class="stat-label">Entrega a tiempo</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-number">99<span>%</span></div>
+        <div class="stat-label">Clientes satisfechos</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-number">&lt;2<span>s</span></div>
+        <div class="stat-label">Tiempo de carga promedio</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTAFOLIO CON FILTROS -->
+<section id="portfolio-main">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Proyectos</div>
+      <h2>Todos nuestros proyectos</h2>
+    </div>
+
+    <!-- Botones de filtro -->
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="landing">Landing Pages</button>
+      <button class="filter-btn" data-filter="corporativa">Web Corporativa</button>
+    </div>
+
+    <!-- Grid de proyectos -->
+    <div class="portfolio-full-grid" id="portfolioGrid">
+
+      <!-- Proyecto 1 - Grande -->
+      <div class="portfolio-full-card card-large reveal" data-category="landing">
+        <div class="portfolio-full-thumb pft-1">
+          <div class="portfolio-full-browser">
+            <div class="pf-browser-bar"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+            <div class="pf-browser-body">
+              <div class="pf-hero"></div>
+              <div class="pf-line w100"></div>
+              <div class="pf-line w70"></div>
+              <div class="pf-line w50 accent"></div>
+              <div class="pf-cols" style="margin-top:6px;">
+                <div class="pf-col-block"></div>
+                <div class="pf-col-block"></div>
+                <div class="pf-col-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-full-overlay">
+            <div class="overlay-title">Clínica Dental Sonrisa</div>
+            <div class="overlay-btn">Ver detalles</div>
+          </div>
+        </div>
+        <div class="portfolio-full-info">
+          <h3>Clínica Dental Sonrisa — Landing Page de Captación</h3>
+          <span class="pf-client">Lima, Perú · 2025</span>
+          <div class="pf-tags">
+            <span class="pf-tag">Landing Page</span>
+            <span class="pf-tag">Salud</span>
+            <span class="pf-tag tag-result">+120% consultas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="portfolio-full-card reveal reveal-delay-1" data-category="corporativa">
+        <div class="portfolio-full-thumb pft-2">
+          <div class="portfolio-full-browser">
+            <div class="pf-browser-bar"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+            <div class="pf-browser-body">
+              <div class="pf-hero"></div>
+              <div class="pf-line w100"></div>
+              <div class="pf-line w70"></div>
+            </div>
+          </div>
+          <div class="portfolio-full-overlay">
+            <div class="overlay-title">Constructora Andina</div>
+            <div class="overlay-btn">Ver detalles</div>
+          </div>
+        </div>
+        <div class="portfolio-full-info">
+          <h3>Constructora Andina SAC</h3>
+          <span class="pf-client">Arequipa, Perú · 2025</span>
+          <div class="pf-tags">
+            <span class="pf-tag">Web Corporativa</span>
+            <span class="pf-tag">Construcción</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="portfolio-full-card reveal reveal-delay-2" data-category="landing">
+        <div class="portfolio-full-thumb pft-3">
+          <div class="portfolio-full-browser">
+            <div class="pf-browser-bar"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+            <div class="pf-browser-body">
+              <div class="pf-line w50 accent" style="height:7px;margin-bottom:5px;"></div>
+              <div class="pf-line w100"></div>
+              <div class="pf-line w70"></div>
+              <div class="pf-line w100" style="height:20px;background:rgba(45,127,249,0.2);border-radius:5px;margin-top:5px;"></div>
+            </div>
+          </div>
+          <div class="portfolio-full-overlay">
+            <div class="overlay-title">Coach Empresarial</div>
+            <div class="overlay-btn">Ver detalles</div>
+          </div>
+        </div>
+        <div class="portfolio-full-info">
+          <h3>Lanzamiento de Curso Online</h3>
+          <span class="pf-client">Lima, Perú · 2025</span>
+          <div class="pf-tags">
+            <span class="pf-tag">Landing Page</span>
+            <span class="pf-tag">Educación</span>
+            <span class="pf-tag tag-result">+85 alumnos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 4 - Grande -->
+      <div class="portfolio-full-card card-large reveal" data-category="corporativa">
+        <div class="portfolio-full-thumb pft-4">
+          <div class="portfolio-full-browser">
+            <div class="pf-browser-bar"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+            <div class="pf-browser-body">
+              <div class="pf-hero"></div>
+              <div class="pf-cols">
+                <div class="pf-col-block" style="height:30px;"></div>
+                <div class="pf-col-block" style="height:30px;background:rgba(45,127,249,0.2);"></div>
+                <div class="pf-col-block" style="height:30px;"></div>
+              </div>
+              <div class="pf-line w100" style="margin-top:5px;"></div>
+              <div class="pf-line w70"></div>
+            </div>
+          </div>
+          <div class="portfolio-full-overlay">
+            <div class="overlay-title">Restaurante El Pacífico</div>
+            <div class="overlay-btn">Ver detalles</div>
+          </div>
+        </div>
+        <div class="portfolio-full-info">
+          <h3>Restaurante El Pacífico — Presencia Digital Completa</h3>
+          <span class="pf-client">Miraflores, Lima · 2025</span>
+          <div class="pf-tags">
+            <span class="pf-tag">Web Corporativa</span>
+            <span class="pf-tag">Gastronomía</span>
+            <span class="pf-tag tag-result">+200% reservas online</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 5 -->
+      <div class="portfolio-full-card reveal reveal-delay-1" data-category="corporativa">
+        <div class="portfolio-full-thumb pft-5">
+          <div class="portfolio-full-browser">
+            <div class="pf-browser-bar"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+            <div class="pf-browser-body">
+              <div class="pf-hero"></div>
+              <div class="pf-line w100"></div>
+              <div class="pf-line w70"></div>
+              <div class="pf-line w50 accent"></div>
+            </div>
+          </div>
+          <div class="portfolio-full-overlay">
+            <div class="overlay-title">Abogados Mendoza & Asoc.</div>
+            <div class="overlay-btn">Ver detalles</div>
+          </div>
+        </div>
+        <div class="portfolio-full-info">
+          <h3>Abogados Mendoza &amp; Asociados</h3>
+          <span class="pf-client">San Isidro, Lima · 2025</span>
+          <div class="pf-tags">
+            <span class="pf-tag">Web Corporativa</span>
+            <span class="pf-tag">Legal</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 6 -->
+      <div class="portfolio-full-card reveal reveal-delay-2" data-category="landing">
+        <div class="portfolio-full-thumb pft-6">
+          <div class="portfolio-full-browser">
+            <div class="pf-browser-bar"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+            <div class="pf-browser-body">
+              <div class="pf-hero"></div>
+              <div class="pf-line w100"></div>
+              <div class="pf-line w70 accent"></div>
+              <div class="pf-line w50"></div>
+            </div>
+          </div>
+          <div class="portfolio-full-overlay">
+            <div class="overlay-title">Tienda Moda Perú</div>
+            <div class="overlay-btn">Ver detalles</div>
+          </div>
+        </div>
+        <div class="portfolio-full-info">
+          <h3>Tienda Moda Perú — Captación de Leads</h3>
+          <span class="pf-client">Trujillo, Perú · 2025</span>
+          <div class="pf-tags">
+            <span class="pf-tag">Landing Page</span>
+            <span class="pf-tag">Moda</span>
+            <span class="pf-tag tag-result">+300 leads/mes</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="portfolio-testimonials">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 4rem;">
+      <div class="section-tag center-tag">Testimonios</div>
+      <h2>Lo que dicen nuestros clientes</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"WEBLIFT me hizo una landing page y desde el primer mes mis anuncios de Instagram generaron el doble de consultas. El proceso fue súper simple."</p>
+        <div class="testi-author"><div class="testi-avatar">MC</div><div class="testi-name"><strong>María Castillo</strong><span>Clínica Dental, Lima</span></div></div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"No tuve que preocuparme por nada técnico. En 18 días tenía mi web corporativa funcionando perfectamente con todo incluido."</p>
+        <div class="testi-author"><div class="testi-avatar">JR</div><div class="testi-name"><strong>Jorge Ramírez</strong><span>Constructora Andina, Arequipa</span></div></div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Contraté la landing para mi curso online. El diseño es moderno, carga rapidísimo y el formulario funciona perfecto. Muy recomendados."</p>
+        <div class="testi-author"><div class="testi-avatar">AL</div><div class="testi-name"><strong>Ana Lucía Quispe</strong><span>Coach Empresarial, Lima</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="portfolio-cta">
+  <div class="container">
+    <div class="portfolio-cta-inner reveal">
+      <div class="section-tag center-tag" style="color:var(--blue-hover);">
+        <span style="background:var(--blue-hover);display:block;width:24px;height:2px;"></span>
+        Tu proyecto es el siguiente
+      </div>
+      <h2>¿Quieres resultados como estos?</h2>
+      <p>Cuéntanos sobre tu negocio y te mostramos cómo podemos ayudarte.</p>
+      <div class="portfolio-cta-btns">
+        <a href="contact.html" class="btn-primary">Quiero mi cotización gratis</a>
+        <a href="services.html" class="btn-secondary">Ver nuestros servicios →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo footer-logo">
+          <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img" style="height:28px;"/>
+          WEB<span>LIFT</span>
+        </a>
+        <p>Agencia peruana de diseño y desarrollo web. Hosting incluido en cada proyecto.</p>
+      </div>
+      <div class="footer-col"><h4>Servicios</h4><ul>
+        <li><a href="services.html">Landing Pages</a></li>
+        <li><a href="services.html">Webs Corporativas</a></li>
+        <li><a href="services.html">Mantenimiento</a></li>
+        <li><a href="contact.html">Cotización gratis</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul>
+        <li><a href="home.html#about">Quiénes somos</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="portfolio.html">Portafolio</a></li>
+        <li><a href="home.html#testimonials">Testimonios</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul>
+        <li><a href="mailto:hola@weblift.studio">hola@weblift.studio</a></li>
+        <li><a href="https://wa.me/51999999999" target="_blank">WhatsApp</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 WEBLIFT Studio. Todos los derechos reservados. Lima, Perú.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">IG</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="https://wa.me/51999999999" class="social-btn">WA</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../js/config/firebase-config.js"></script>
+<script src="../js/services/auth-service.js"></script>
+<!-- UI — en este orden exacto -->
+<script src="../js/ui/intro.js"></script>
+<script src="../js/ui/navbar.js"></script>
+<script src="../js/ui/animations.js"></script>
+<script src="../js/ui/main.js"></script>
+
+<script>
+  // Filtro de portafolio
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Actualizar botón activo
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      const cards  = document.querySelectorAll('.portfolio-full-card');
+
+      cards.forEach(card => {
+        const category = card.dataset.category;
+        if (filter === 'all' || category === filter) {
+          card.style.display = '';
+          setTimeout(() => { card.style.opacity = '1'; card.style.transform = ''; }, 10);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => { card.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="WEBLIFT Studio — We Program, You Grow. Agencia digital premium en Lima, Perú."/>
+  <title>WEBLIFT Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/global.css"/>
+  <link rel="stylesheet" href="assets/css/intro.css"/>
+</head>
+<body>
+
+<!-- ═══════════ PANTALLA DE INTRO ═══════════
+     Muestra únicamente la imagen oficial del logo.
+     Sin texto generado. Sin "WebLift" escrito.
+     Solo la imagen real + slogan pequeño.
+═════════════════════════════════════════════ -->
+<div id="intro-screen">
+
+  <div class="intro-logo-wrap">
+
+    <!--
+      IMAGEN OFICIAL DEL LOGO
+      El logo tiene fondo azul marino con texto blanco,
+      por lo que NO necesita filter invert — se ve perfecto
+      sobre el fondo navy de la intro.
+      
+      Si tu logo es blanco/transparente: quita el filter de intro.css
+      Si tu logo es oscuro sobre blanco: mantén el filter brightness(10)
+    -->
+    <img
+      src="assets/images/logo.png"
+      alt="WEBLIFT Agency"
+      class="intro-logo-img"
+    />
+
+    <!-- Línea decorativa sutil -->
+    <div class="intro-line"></div>
+
+    <!-- Slogan refinado -->
+    <div class="intro-slogan">We Program, You Grow</div>
+
+  </div>
+
+  <!-- Barra de progreso en la base -->
+  <div class="intro-progress">
+    <div class="intro-progress-bar"></div>
+  </div>
+
+</div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="js/config/firebase-config.js"></script>
+<script src="js/services/auth-service.js"></script>
+<script src="js/ui/intro.js"></script>
+<script src="js/ui/animations.js"></script>
+<script src="js/ui/main.js"></script>
+
+<script>
+  /*
+    CORRECCIÓN de sincronización:
+    - IntroUI.exit() se dispara a los 2600ms (desde intro.js)
+    - La animación de salida dura ~650ms
+    - El redirect ocurre a los 3200ms → margen de ~600ms limpio
+    Sin pantalla en blanco, sin solapamiento.
+  */
+  setTimeout(() => {
+    window.location.href = "pages/home.html";
+  }, 3200);
+</script>
+
+</body>
+</html>

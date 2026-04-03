@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Servicios de WEBLIFT Studio — Diseño web, landing pages y mantenimiento con hosting incluido en Perú."/>
+  <title>Servicios — WEBLIFT Studio</title>
+  <link rel="stylesheet" href="../assets/css/global.css"/>
+  <link rel="stylesheet" href="../assets/css/navbar.css"/>
+  <link rel="stylesheet" href="../assets/css/services.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar" class="scrolled">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img"/>
+    WEB<span>LIFT</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="home.html">Inicio</a></li>
+    <li><a href="services.html" class="active">Servicios</a></li>
+    <li><a href="portfolio.html">Portafolio</a></li>
+    <li><a href="pricing.html">Precios</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+  </ul>
+  <div class="nav-auth">
+    <a href="login.html" class="nav-btn-login" id="navLogin">Ingresar</a>
+    <a href="register.html" class="nav-btn-cta" id="navRegister">Cotizar gratis</a>
+    <div style="position:relative;">
+      <div class="nav-user" id="navUser" style="display:none;">
+        <div class="nav-user-avatar" id="navAvatar">U</div>
+        <span class="nav-user-name" id="navUserName">Mi cuenta</span>
+      </div>
+      <div class="nav-user-dropdown" id="navDropdown">
+        <a href="contact.html">📋 Nueva cotización</a>
+        <button class="logout-btn" id="navLogout">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content container">
+    <div class="section-tag">Nuestros Servicios</div>
+    <h1>Soluciones digitales <em>completas</em> para tu negocio</h1>
+    <p>Desde el diseño hasta el servidor — todo incluido en un solo paquete. Sin intermediarios, sin complicaciones técnicas.</p>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICIOS PRINCIPALES ═══════════ -->
+<section id="services-main">
+  <div class="container">
+    <div class="reveal" style="max-width:600px;">
+      <div class="section-tag">Qué hacemos</div>
+      <h2>Elige el servicio que necesita tu negocio</h2>
+    </div>
+
+    <div class="services-detail-grid">
+
+      <!-- Servicio 1: Landing Page -->
+      <div class="service-detail-card reveal reveal-delay-1">
+        <div class="service-detail-header">
+          <div class="service-detail-icon">⚡</div>
+          <div class="service-detail-header-text">
+            <h3>Landing Page de Alta Conversión</h3>
+            <div class="service-price">Desde S/. 600</div>
+          </div>
+        </div>
+        <p class="service-detail-desc">
+          Una sola página diseñada con un objetivo claro: que el visitante tome acción. Ideal para campañas de publicidad en Google Ads, Meta Ads y TikTok. Estructura psicológica pensada para convertir visitas en clientes.
+        </p>
+        <div class="service-detail-includes">
+          <h4>Incluido en este servicio</h4>
+          <ul>
+            <li><span class="check-circle">✓</span> Diseño personalizado con tu identidad de marca</li>
+            <li><span class="check-circle">✓</span> Estructura de conversión (headline, beneficios, CTA)</li>
+            <li><span class="check-circle">✓</span> Versión móvil 100% optimizada</li>
+            <li><span class="check-circle">✓</span> Formulario de captación o botón de WhatsApp</li>
+            <li><span class="check-circle">✓</span> Integración con Google Analytics</li>
+            <li><span class="check-circle">✓</span> Velocidad de carga inferior a 2 segundos</li>
+            <li><span class="check-circle">✓</span> Hosting gestionado por 1 año completo</li>
+            <li><span class="check-circle">✓</span> Certificado SSL (candado de seguridad)</li>
+            <li><span class="check-circle">✓</span> Dominio .com o .pe incluido el primer año</li>
+            <li><span class="check-circle">✓</span> 30 días de soporte post-entrega</li>
+          </ul>
+        </div>
+        <div class="service-detail-cta">
+          <span class="service-detail-time">⏱ Entrega: 7 a 10 días hábiles</span>
+          <a href="contact.html" class="btn-primary" style="font-size:0.875rem;padding:0.7rem 1.5rem;">
+            Cotizar ahora →
+          </a>
+        </div>
+      </div>
+
+      <!-- Servicio 2: Web Corporativa -->
+      <div class="service-detail-card featured-card reveal reveal-delay-2">
+        <div class="service-detail-header">
+          <div class="service-detail-icon">🖥️</div>
+          <div class="service-detail-header-text">
+            <h3>Página Web Corporativa</h3>
+            <div class="service-price">Desde S/. 1,200</div>
+          </div>
+        </div>
+        <p class="service-detail-desc">
+          Tu presencia digital profesional y completa. Hasta 6 secciones personalizadas con diseño premium adaptado a tu marca. Ideal para empresas, profesionales independientes y negocios que quieren credibilidad online.
+        </p>
+        <div class="service-detail-includes">
+          <h4>Incluido en este servicio</h4>
+          <ul>
+            <li><span class="check-circle">✓</span> Hasta 6 secciones: inicio, nosotros, servicios, portafolio, testimonios, contacto</li>
+            <li><span class="check-circle">✓</span> Diseño premium a medida de tu marca</li>
+            <li><span class="check-circle">✓</span> Responsive en móvil, tablet y desktop</li>
+            <li><span class="check-circle">✓</span> SEO básico on-page configurado</li>
+            <li><span class="check-circle">✓</span> Formulario de contacto funcional</li>
+            <li><span class="check-circle">✓</span> Integración con redes sociales</li>
+            <li><span class="check-circle">✓</span> Google Analytics y Maps incluido</li>
+            <li><span class="check-circle">✓</span> Hosting gestionado por 1 año completo</li>
+            <li><span class="check-circle">✓</span> Certificado SSL incluido</li>
+            <li><span class="check-circle">✓</span> Dominio incluido el primer año</li>
+            <li><span class="check-circle">✓</span> 30 días de soporte post-entrega</li>
+          </ul>
+        </div>
+        <div class="service-detail-cta">
+          <span class="service-detail-time">⏱ Entrega: 15 a 20 días hábiles</span>
+          <a href="contact.html" class="btn-primary" style="font-size:0.875rem;padding:0.7rem 1.5rem;">
+            Cotizar ahora →
+          </a>
+        </div>
+      </div>
+
+      <!-- Servicio 3: Mantenimiento (ocupa 2 columnas) -->
+      <div class="service-detail-card wide reveal">
+        <div>
+          <div class="service-detail-header">
+            <div class="service-detail-icon">🔧</div>
+            <div class="service-detail-header-text">
+              <h3>Mantenimiento y Soporte Técnico</h3>
+              <div class="service-price">S/. 150 / mes</div>
+            </div>
+          </div>
+          <p class="service-detail-desc" style="margin-top:1rem;">
+            Tu web siempre actualizada, segura y funcionando al 100%. Nos encargamos de todo lo técnico para que tú puedas enfocarte 100% en tu negocio. Sin contratos mínimos, cancela cuando quieras.
+          </p>
+          <div class="service-detail-cta" style="margin-top:1.5rem;">
+            <span class="service-detail-time">📅 Facturación mensual</span>
+            <a href="contact.html" class="btn-primary" style="font-size:0.875rem;padding:0.7rem 1.5rem;">
+              Contratar soporte →
+            </a>
+          </div>
+        </div>
+        <div class="service-detail-includes">
+          <h4>Incluido cada mes</h4>
+          <ul>
+            <li><span class="check-circle">✓</span> Renovación y gestión del hosting</li>
+            <li><span class="check-circle">✓</span> Backups automáticos diarios</li>
+            <li><span class="check-circle">✓</span> Actualizaciones de seguridad del servidor</li>
+            <li><span class="check-circle">✓</span> Monitoreo de uptime 24/7</li>
+            <li><span class="check-circle">✓</span> Soporte técnico prioritario</li>
+            <li><span class="check-circle">✓</span> Hasta 2 cambios de contenido por mes</li>
+            <li><span class="check-circle">✓</span> Reporte mensual de métricas y visitas</li>
+            <li><span class="check-circle">✓</span> Renovación del certificado SSL</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROCESO DE TRABAJO ═══════════ -->
+<section id="services-process">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 0;">
+      <div class="section-tag center-tag">Proceso de Trabajo</div>
+      <h2>Así trabajamos contigo paso a paso</h2>
+      <p class="section-desc">Un proceso claro y transparente. Siempre sabrás en qué etapa está tu proyecto.</p>
+    </div>
+
+    <div class="process-timeline">
+
+      <div class="timeline-step reveal reveal-delay-1">
+        <div class="timeline-left">
+          <div class="timeline-num">💬</div>
+        </div>
+        <div class="timeline-content">
+          <h3>Paso 1 — Briefing y consulta inicial</h3>
+          <p>Conversamos sobre tu negocio, tus objetivos y lo que quieres lograr con tu web. Te enviamos un formulario de briefing para recopilar toda la información necesaria: colores de tu marca, textos, imágenes y referencias de webs que te gustan.</p>
+          <div class="timeline-duration">⏱ 1 a 2 días</div>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal reveal-delay-2">
+        <div class="timeline-left">
+          <div class="timeline-num">🎨</div>
+        </div>
+        <div class="timeline-content">
+          <h3>Paso 2 — Propuesta y firma de contrato</h3>
+          <p>Te enviamos la cotización formal con el precio, tiempo de entrega y todo el alcance del proyecto por escrito. Firmas el contrato y pagas el 50% de anticipo para comenzar. A partir de aquí el proyecto está en marcha.</p>
+          <div class="timeline-duration">⏱ 1 a 2 días</div>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal reveal-delay-3">
+        <div class="timeline-left">
+          <div class="timeline-num">🖌️</div>
+        </div>
+        <div class="timeline-content">
+          <h3>Paso 3 — Diseño visual en Figma</h3>
+          <p>Creamos el diseño visual completo de tu web en Figma y te lo mostramos para aprobación. Puedes pedir hasta 2 rondas de cambios en esta etapa. Solo pasamos a programar cuando el diseño está 100% aprobado por ti.</p>
+          <div class="timeline-duration">⏱ 3 a 5 días</div>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal reveal-delay-1">
+        <div class="timeline-left">
+          <div class="timeline-num">⚙️</div>
+        </div>
+        <div class="timeline-content">
+          <h3>Paso 4 — Desarrollo y configuración técnica</h3>
+          <p>Programamos tu web siguiendo el diseño aprobado. Configuramos el servidor de hosting, conectamos el dominio, instalamos el certificado SSL y optimizamos la velocidad de carga. Toda la parte técnica la manejamos nosotros.</p>
+          <div class="timeline-duration">⏱ 5 a 15 días</div>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal reveal-delay-2">
+        <div class="timeline-left">
+          <div class="timeline-num">🔍</div>
+        </div>
+        <div class="timeline-content">
+          <h3>Paso 5 — Revisión y ajustes finales</h3>
+          <p>Te mostramos la web funcionando en vivo en un entorno de prueba. Revisas cada sección y nos dices qué ajustes necesitas. Incluimos hasta 2 rondas de revisiones sin costo adicional.</p>
+          <div class="timeline-duration">⏱ 2 a 4 días</div>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal reveal-delay-3">
+        <div class="timeline-left">
+          <div class="timeline-num">🚀</div>
+        </div>
+        <div class="timeline-content">
+          <h3>Paso 6 — Entrega oficial y lanzamiento</h3>
+          <p>Tu web queda publicada y accesible para todo el mundo. Pagas el 50% restante y activamos los 30 días de soporte post-entrega incluido. ¡Tu negocio ya está en internet!</p>
+          <div class="timeline-duration">⏱ 1 día</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TABLA COMPARATIVA ═══════════ -->
+<section id="services-compare">
+  <div class="container">
+    <div class="compare-header reveal">
+      <div class="section-tag center-tag">Comparación</div>
+      <h2>¿Qué incluye cada plan?</h2>
+      <p class="section-desc">Compara los servicios y elige el que mejor se adapta a tu negocio.</p>
+    </div>
+
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>Landing Page</th>
+            <th class="highlight">Web Corporativa</th>
+            <th>Mantenimiento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Precio de inicio</td>
+            <td>S/. 600</td>
+            <td class="compare-blue">S/. 1,200</td>
+            <td>S/. 150/mes</td>
+          </tr>
+          <tr>
+            <td>Número de páginas / secciones</td>
+            <td>1 página</td>
+            <td class="compare-blue">Hasta 6 secciones</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Diseño personalizado</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Versión mobile optimizada</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>SEO básico on-page</td>
+            <td class="compare-no">—</td>
+            <td class="compare-yes">✓</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Hosting gestionado 1 año</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+          </tr>
+          <tr>
+            <td>Certificado SSL</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+          </tr>
+          <tr>
+            <td>Dominio incluido 1er año</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-no">—</td>
+          </tr>
+          <tr>
+            <td>Google Analytics</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+          </tr>
+          <tr>
+            <td>Backups diarios</td>
+            <td class="compare-no">—</td>
+            <td class="compare-no">—</td>
+            <td class="compare-yes">✓</td>
+          </tr>
+          <tr>
+            <td>Cambios de contenido/mes</td>
+            <td class="compare-no">—</td>
+            <td class="compare-no">—</td>
+            <td class="compare-blue">2 cambios</td>
+          </tr>
+          <tr>
+            <td>30 días soporte post-entrega</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+            <td class="compare-yes">✓</td>
+          </tr>
+          <tr>
+            <td>Tiempo de entrega</td>
+            <td>7 – 10 días</td>
+            <td class="compare-blue">15 – 20 días</td>
+            <td>Inmediato</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section id="services-faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <div class="section-tag center-tag">Preguntas Frecuentes</div>
+      <h2>Resolvemos tus dudas</h2>
+    </div>
+    <div class="faq-grid">
+
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué necesito para que empiecen mi web?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Solo necesitas tu logo (si tienes), los textos de tu negocio, algunas fotos y referencias de webs que te gusten. Nosotros te guiamos con un formulario de briefing paso a paso. Si no tienes logo te podemos orientar también.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué pasa si no me gusta el diseño?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Incluimos hasta 2 rondas de cambios en la etapa de diseño sin costo adicional. Si después de las 2 rondas aún no estás satisfecho, coordinamos una revisión adicional. Tu satisfacción es nuestra prioridad.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿El hosting está realmente incluido?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sí, completamente. El primer año de hosting gestionado está incluido en el precio del proyecto. A partir del segundo año pagas una renovación anual (S/. 250 para landing page o S/. 400 para web corporativa). Nosotros gestionamos todo — tú no tienes que hacer nada técnico.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Puedo editar mi web después?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Si usamos WordPress (para webs corporativas), sí puedes editar textos e imágenes básicas desde el panel de administración. Para cambios de diseño o funcionalidad más complejos, puedes contratar nuestro plan de mantenimiento mensual.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Cuánto tiempo tarda en estar lista mi web?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Una landing page entre 7 y 10 días hábiles. Una web corporativa entre 15 y 20 días hábiles. Estos plazos dependen de que el cliente entregue los materiales (textos, fotos) a tiempo. Si hay demoras de tu parte, el plazo se ajusta.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Trabajan con clientes fuera de Lima?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sí, atendemos a todo el Perú y también clientes en el extranjero. Todo el proceso es 100% remoto — coordinamos por WhatsApp, email y videollamadas. La entrega del proyecto se hace de forma digital.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA FINAL ═══════════ -->
+<section id="services-cta">
+  <div class="container">
+    <div class="services-cta-inner reveal">
+      <div class="section-tag center-tag" style="color:var(--blue-hover);">
+        <span style="background:var(--blue-hover);display:block;width:24px;height:2px;"></span>
+        Empecemos hoy
+      </div>
+      <h2>¿Listo para tener tu web profesional?</h2>
+      <p>Cotización gratuita en menos de 24 horas. Sin compromiso, sin letra chica.</p>
+      <div class="services-cta-btns">
+        <a href="contact.html" class="btn-primary">Quiero mi cotización gratis</a>
+        <a href="https://wa.me/51999999999?text=Hola%20WEBLIFT,%20quiero%20cotizar" target="_blank" class="btn-secondary">
+          💬 Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo footer-logo">
+          <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img" style="height:28px;"/>
+          WEB<span>LIFT</span>
+        </a>
+        <p>Agencia peruana de diseño y desarrollo web. Hosting incluido en cada proyecto.</p>
+      </div>
+      <div class="footer-col"><h4>Servicios</h4><ul>
+        <li><a href="services.html">Landing Pages</a></li>
+        <li><a href="services.html">Webs Corporativas</a></li>
+        <li><a href="services.html">Mantenimiento</a></li>
+        <li><a href="contact.html">Cotización gratis</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul>
+        <li><a href="home.html#about">Quiénes somos</a></li>
+        <li><a href="services.html#services-process">Cómo trabajamos</a></li>
+        <li><a href="portfolio.html">Portafolio</a></li>
+        <li><a href="home.html#testimonials">Testimonios</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul>
+        <li><a href="mailto:hola@weblift.studio">hola@weblift.studio</a></li>
+        <li><a href="https://wa.me/51999999999" target="_blank">WhatsApp</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 WEBLIFT Studio. Todos los derechos reservados. Lima, Perú.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">IG</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="https://wa.me/51999999999" class="social-btn">WA</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../js/config/firebase-config.js"></script>
+<script src="../js/services/auth-service.js"></script>
+<!-- UI — en este orden exacto -->
+<script src="../js/ui/intro.js"></script>
+<script src="../js/ui/navbar.js"></script>
+<script src="../js/ui/animations.js"></script>
+<script src="../js/ui/main.js"></script>
+
+<script>
+  // Accordion FAQ
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Cerrar todos
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    // Abrir el clickeado si estaba cerrado
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+
+</body>
+</html>

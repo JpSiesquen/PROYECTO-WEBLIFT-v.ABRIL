@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cotización Gratuita — WEBLIFT Studio</title>
+  <link rel="stylesheet" href="../assets/css/global.css"/>
+  <link rel="stylesheet" href="../assets/css/navbar.css"/>
+  <link rel="stylesheet" href="../assets/css/sections.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="scrolled">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img"/>
+    WEB<span>LIFT</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="home.html">Inicio</a></li>
+    <li><a href="home.html#services">Servicios</a></li>
+    <li><a href="home.html#pricing">Precios</a></li>
+  </ul>
+  <div class="nav-auth">
+    <a href="login.html" class="nav-btn-login" id="navLogin">Ingresar</a>
+    <a href="register.html" class="nav-btn-cta" id="navRegister">Registrarse</a>
+    <div style="position:relative;">
+      <div class="nav-user" id="navUser" style="display:none;">
+        <div class="nav-user-avatar" id="navAvatar">U</div>
+        <span class="nav-user-name" id="navUserName">Mi cuenta</span>
+      </div>
+      <div class="nav-user-dropdown" id="navDropdown">
+        <button class="logout-btn" id="navLogout">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════ SECCIÓN CONTACTO ═══════════ -->
+<section id="contact" style="padding-top:140px;">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info izquierda -->
+      <div class="contact-info reveal">
+        <div class="section-tag">Cotización Gratuita</div>
+        <h2>Hablemos de tu proyecto</h2>
+        <p>Cuéntanos sobre tu negocio y te enviamos una propuesta personalizada en menos de 24 horas.</p>
+        <div class="contact-items">
+          <div class="contact-item"><div class="contact-item-icon">📧</div><div class="contact-item-text"><strong>Correo</strong><span>hola@weblift.studio</span></div></div>
+          <div class="contact-item"><div class="contact-item-icon">💬</div><div class="contact-item-text"><strong>WhatsApp</strong><span>+51 999 999 999</span></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text"><strong>Ubicación</strong><span>Lima, Perú — Atendemos todo el país</span></div></div>
+          <div class="contact-item"><div class="contact-item-icon">🕐</div><div class="contact-item-text"><strong>Horario</strong><span>Lunes a Viernes, 9am – 6pm</span></div></div>
+        </div>
+      </div>
+
+      <!-- Formulario derecho -->
+      <div class="contact-form-wrapper reveal reveal-delay-2">
+        <div class="form-header">
+          <h3>Solicita tu cotización gratuita</h3>
+          <p>Te respondemos en menos de 24 horas hábiles.</p>
+        </div>
+
+        <!--
+          AVISO DE LOGIN REQUERIDO
+          Se muestra cuando el usuario NO está logueado.
+          El JS lo oculta cuando sí está logueado.
+        -->
+        <div class="login-required-notice" id="loginNotice">
+          <p>🔒 Para enviar tu cotización necesitas una cuenta gratuita.</p>
+          <div class="notice-btns">
+            <a href="login.html?redirect=contact.html" class="btn-outline" style="font-size:0.85rem;padding:0.6rem 1.25rem;">
+              Iniciar sesión
+            </a>
+            <a href="register.html?redirect=contact.html" class="btn-primary" style="font-size:0.85rem;padding:0.6rem 1.25rem;">
+              Crear cuenta gratis
+            </a>
+          </div>
+        </div>
+
+        <!-- Saludo personalizado (visible cuando logueado) -->
+        <div id="userGreet" style="display:none;background:rgba(45,127,249,0.06);border:1px solid rgba(45,127,249,0.15);border-radius:10px;padding:0.75rem 1rem;font-size:0.875rem;color:#2d5fa0;margin-bottom:1.25rem;"></div>
+
+        <!-- Formulario (oculto hasta que el usuario esté logueado) -->
+        <form id="contactForm" style="display:none;" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required/>
+              <span class="field-error" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa / Negocio</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Tu negocio"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required/>
+              <span class="field-error" id="error-email"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefono">WhatsApp / Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+51 999 999 999"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="servicio">¿Qué servicio te interesa? *</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Selecciona una opción</option>
+              <option value="Landing Page">Landing Page</option>
+              <option value="Página Web Corporativa">Página Web Corporativa</option>
+              <option value="Mantenimiento / Soporte">Mantenimiento / Soporte</option>
+              <option value="No sé aún, quiero asesoría">No sé aún, quiero asesoría</option>
+            </select>
+            <span class="field-error" id="error-servicio"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Cuéntanos sobre tu proyecto *</label>
+            <textarea id="mensaje" name="mensaje" placeholder="¿Qué hace tu negocio? ¿Qué quieres lograr con tu web?" required></textarea>
+            <span class="field-error" id="error-mensaje"></span>
+          </div>
+
+          <!-- Mensaje de éxito -->
+          <div class="form-success" id="formSuccess">
+            ✅ ¡Cotización enviada! Te contactamos en menos de 24 horas.
+          </div>
+
+          <button type="submit" class="btn-submit" id="btnSubmit">
+            <span>Enviar cotización</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+        </form>
+
+        <!-- El formBody es el contenedor que muestra/oculta el form -->
+        <div id="formBody" style="display:none;">
+          <!-- JS inyecta el form aquí si está logueado, o lo hace visible -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2026 WEBLIFT Studio. Lima, Perú.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">IG</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="https://wa.me/51999999999" class="social-btn">WA</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script src="../js/config/firebase-config.js"></script>
+<script src="../js/services/auth-service.js"></script>
+<script src="../js/services/cotizacion-service.js"></script>
+<script src="../js/controllers/contact-controller.js"></script>
+<!-- UI — en este orden exacto -->
+<script src="../js/ui/intro.js"></script>
+<script src="../js/ui/navbar.js"></script>
+<script src="../js/ui/animations.js"></script>
+<script src="../js/ui/main.js"></script>
+
+<script>
+  // Hacer visible el form body cuando el usuario esté logueado
+  // ContactController.init() ya maneja esto — el form se muestra en updateFormState()
+  document.getElementById("contactForm").style.display = "";
+</script>
+
+</body>
+</html>

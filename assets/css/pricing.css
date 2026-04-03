@@ -1,0 +1,387 @@
+/* ═══════════════════════════════════════════════
+   WEBLIFT Studio — pricing.css
+═══════════════════════════════════════════════ */
+
+/* ── Toggle mensual/anual ── */
+#pricing-main { background: var(--white); padding: 100px 5%; }
+
+.pricing-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0 4rem;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-body);
+  transition: color var(--transition);
+}
+
+.toggle-label.active { color: var(--navy); }
+
+.toggle-switch {
+  width: 52px;
+  height: 28px;
+  background: var(--border-card);
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: background var(--transition);
+  border: none;
+}
+
+.toggle-switch.on { background: var(--blue); }
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  width: 22px; height: 22px;
+  background: white;
+  border-radius: 50%;
+  top: 3px; left: 3px;
+  transition: transform var(--transition);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.toggle-switch.on::after { transform: translateX(24px); }
+
+.toggle-badge {
+  background: rgba(26,122,74,0.1);
+  color: #1a7a4a;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* ── Grid de precios ── */
+.pricing-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.pricing-full-card {
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+  background: white;
+}
+
+.pricing-full-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.pricing-full-card.popular {
+  background: var(--navy);
+  border-color: var(--navy-light);
+  transform: scale(1.04);
+}
+
+.pricing-full-card.popular:hover {
+  transform: scale(1.04) translateY(-6px);
+}
+
+.popular-label {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 5px 20px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pricing-full-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.pricing-full-card.popular .pricing-full-name { color: white; }
+
+.pricing-full-tagline {
+  font-size: 0.82rem;
+  color: var(--text-body);
+  margin-bottom: 2rem;
+}
+
+.pricing-full-card.popular .pricing-full-tagline { color: var(--text-muted); }
+
+/* Precio */
+.pricing-amount-block {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.pricing-full-card.popular .pricing-amount-block {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.pricing-main-price {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.pricing-full-card.popular .pricing-main-price { color: white; }
+
+.pricing-main-price small {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-body);
+}
+
+.pricing-sub {
+  font-size: 0.78rem;
+  color: var(--text-body);
+}
+
+.pricing-full-card.popular .pricing-sub { color: var(--text-muted); }
+
+/* Features */
+.pricing-full-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-full-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-body);
+}
+
+.pricing-full-card.popular .pricing-full-feature { color: var(--text-light); }
+
+.feature-check {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(45,127,249,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem;
+  color: var(--blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pricing-full-card.popular .feature-check {
+  background: rgba(45,127,249,0.25);
+  color: var(--blue-hover);
+}
+
+.pricing-full-feature.dimmed { opacity: 0.4; }
+.pricing-full-feature.dimmed .feature-check { background: var(--border-card); color: var(--text-muted); }
+
+/* Botones de plan */
+.btn-pricing {
+  display: block;
+  text-align: center;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.btn-pricing-outline {
+  border: 1px solid #d0dff0;
+  color: var(--navy);
+  background: white;
+}
+
+.btn-pricing-outline:hover {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+.btn-pricing-solid {
+  background: var(--blue);
+  color: white;
+}
+
+.btn-pricing-solid:hover {
+  background: var(--blue-hover);
+  box-shadow: 0 8px 24px rgba(45,127,249,0.35);
+}
+
+/* Nota debajo de precios */
+.pricing-footer-note {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  color: var(--text-body);
+}
+
+.pricing-footer-note a {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+/* ── Add-ons / Servicios adicionales ── */
+#pricing-addons {
+  background: var(--section-bg);
+  padding: 100px 5%;
+}
+
+.addons-header {
+  max-width: 560px;
+  margin-bottom: 3rem;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.addon-card {
+  background: white;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.addon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.addon-icon {
+  font-size: 1.5rem;
+  width: 44px; height: 44px;
+  background: rgba(45,127,249,0.08);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.addon-card h3 {
+  font-size: 0.95rem;
+  color: var(--navy);
+}
+
+.addon-card p {
+  font-size: 0.82rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.addon-price {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* ── Garantía ── */
+#pricing-guarantee {
+  background: white;
+  padding: 80px 5%;
+}
+
+.guarantee-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--section-bg);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+}
+
+.guarantee-icon-wrap {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: rgba(45,127,249,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.guarantee-text h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.guarantee-text p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.8;
+}
+
+/* ── CTA ── */
+#pricing-cta {
+  background: var(--navy-deep);
+  padding: 100px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+#pricing-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(45,127,249,0.15), transparent);
+  pointer-events: none;
+}
+
+.pricing-cta-inner {
+  position: relative; z-index: 1;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-cta-inner h2 { color: white; margin-bottom: 1rem; }
+.pricing-cta-inner p  { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 3rem; }
+.pricing-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .pricing-full-grid { grid-template-columns: 1fr; max-width: 460px; }
+  .pricing-full-card.popular { transform: none; }
+  .pricing-full-card.popular:hover { transform: translateY(-6px); }
+  .addons-grid { grid-template-columns: 1fr 1fr; }
+  .guarantee-inner { grid-template-columns: 1fr; text-align: center; }
+  .guarantee-icon-wrap { margin: 0 auto; }
+}
+
+@media (max-width: 768px) {
+  .addons-grid { grid-template-columns: 1fr; }
+  .guarantee-inner { padding: 2rem; }
+}
