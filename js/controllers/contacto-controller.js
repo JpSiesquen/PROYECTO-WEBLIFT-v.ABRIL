@@ -8,9 +8,18 @@
 
 const ContactoController = {
 
+  MIN_SECONDS_BEFORE_SUBMIT: 8,
+  SUBMIT_COOLDOWN_MS: 30000,
+  FORM_OPEN_KEY: "weblift_contact_form_opened_at",
+  LAST_SUBMIT_KEY: "weblift_contact_last_submit_at",
+
   init() {
     const form = document.getElementById("contactForm");
     if (!form) return;
+
+    if (!sessionStorage.getItem(this.FORM_OPEN_KEY)) {
+      sessionStorage.setItem(this.FORM_OPEN_KEY, String(Date.now()));
+    }
 
     // El formulario siempre está visible — sin login required
     form.style.display = "block";
@@ -18,6 +27,9 @@ const ContactoController = {
     // Submit
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      const honeypot = document.getElementById("hp-company");
+      if (honeypot && honeypot.value.trim() !== "") return;
+      if (!this.validarTiempo()) return;
       if (!this.validar()) return;
       await this.enviar();
     });
@@ -85,6 +97,41 @@ const ContactoController = {
     return ok;
   },
 
+  validarTiempo() {
+    const errorGlobal = document.getElementById("cf-error-global");
+    const openedAtRaw = sessionStorage.getItem(this.FORM_OPEN_KEY);
+    const lastSubmitRaw = localStorage.getItem(this.LAST_SUBMIT_KEY);
+    const now = Date.now();
+
+    if (openedAtRaw) {
+      const openedAt = Number(openedAtRaw);
+      const elapsedSeconds = Math.floor((now - openedAt) / 1000);
+      if (elapsedSeconds < this.MIN_SECONDS_BEFORE_SUBMIT) {
+        const remaining = this.MIN_SECONDS_BEFORE_SUBMIT - elapsedSeconds;
+        if (errorGlobal) {
+          errorGlobal.textContent = `Espera ${remaining} segundo${remaining === 1 ? "" : "s"} antes de enviar el formulario.`;
+          errorGlobal.style.display = "block";
+        }
+        return false;
+      }
+    }
+
+    if (lastSubmitRaw) {
+      const lastSubmitAt = Number(lastSubmitRaw);
+      const elapsedSinceLastSubmit = now - lastSubmitAt;
+      if (elapsedSinceLastSubmit < this.SUBMIT_COOLDOWN_MS) {
+        const remainingSeconds = Math.ceil((this.SUBMIT_COOLDOWN_MS - elapsedSinceLastSubmit) / 1000);
+        if (errorGlobal) {
+          errorGlobal.textContent = `Espera ${remainingSeconds} segundo${remainingSeconds === 1 ? "" : "s"} antes de enviar otro mensaje.`;
+          errorGlobal.style.display = "block";
+        }
+        return false;
+      }
+    }
+
+    return true;
+  },
+
   /* ══════════════════
      ENVÍO A FIREBASE
   ══════════════════ */
@@ -117,6 +164,8 @@ const ContactoController = {
 
     try {
       await ContactoService.guardar(datos);
+      localStorage.setItem(this.LAST_SUBMIT_KEY, String(Date.now()));
+      sessionStorage.setItem(this.FORM_OPEN_KEY, String(Date.now()));
 
       // Éxito — mostrar mensaje y limpiar form
       const form = document.getElementById("contactForm");

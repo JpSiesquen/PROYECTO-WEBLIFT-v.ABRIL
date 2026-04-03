@@ -1,14 +1,5 @@
 /* ═══════════════════════════════════════════════
-   WEBLIFT Studio — navbar.css (v3 — CORREGIDO)
-   
-   CORRECCIONES:
-   1. Links duplicados: el problema era que .nav-auth 
-      estaba dentro del <ul> como un div (inválido en HTML),
-      causando que los items se renderizaran doble.
-      Solución: .nav-auth vive FUERA del <ul>, en el grid del nav.
-   2. Logo: object-fit y altura correcta para mostrar 
-      el logo completo sin recorte
-   3. Una sola barra, layout limpio
+   WEBLIFT Studio — navbar.css   
 ═══════════════════════════════════════════════ */
 
 #navbar {
@@ -17,7 +8,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  min-height: 115px;
+  min-height: 75px;  
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -48,14 +39,8 @@ nav.scrolled {
   text-decoration: none;
 }
 
-.nav-logo-img {
-  /* 
-    CORRECCIÓN DEL LOGO:
-    El PNG tiene fondo azul marino con el wordmark en blanco.
-    Mostrar la imagen completa sin recorte ni distorsión.
-    NO usar filter:brightness() porque ya tiene colores correctos.
-  */
-  height: 56px;
+.nav-logo-img {   
+  height: 42px;
   width: auto;
   max-width: none;
   object-fit: contain;

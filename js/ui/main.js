@@ -22,7 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     AnimationsUI.init();
   }
 
-  /* 4. Controladores de formularios Firebase
+  /* 4. Formulario de contacto público
+     Se inicializa siempre que exista el formulario, sin depender de auth. */
+  if (document.getElementById("contactForm") && typeof ContactoController !== "undefined") {
+    try { ContactoController.init(); } catch(e) { console.warn("ContactoController.init:", e.message); }
+  }
+
+  /* 5. Controladores de formularios Firebase
      CORRECCIÓN: checks individuales con try/catch para cada controller,
      así una página sin Firebase no rompe el resto de la UI */
   if (typeof auth !== "undefined") {
@@ -35,11 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Página de registro
     if (document.getElementById("registerForm") && typeof AuthController !== "undefined") {
       try { AuthController.initRegister(); } catch(e) { console.warn("AuthController.initRegister:", e.message); }
-    }
-
-    // Formulario de contacto / cotización
-    if (document.getElementById("contactForm") && typeof ContactController !== "undefined") {
-      try { ContactController.init(); } catch(e) { console.warn("ContactController.init:", e.message); }
     }
 
   } else {

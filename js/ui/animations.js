@@ -1,9 +1,9 @@
 /* ═══════════════════════════════════════════════════════════
    WEBLIFT Studio — js/ui/animations.js (CORREGIDO)
    
-   CORRECCIÓN CRÍTICA: eliminado el DOMContentLoaded duplicado
-   que causaba doble inicialización y errores en páginas donde
-   AuthController / ContactController no existen.
+  CORRECCIÓN CRÍTICA: eliminado el DOMContentLoaded duplicado
+  que causaba doble inicialización y errores en páginas donde
+  AuthController no existe.
    
    La inicialización ahora la maneja exclusivamente main.js
 ═══════════════════════════════════════════════════════════ */

@@ -691,6 +691,20 @@
   margin-top: 2px;
   cursor: pointer;
   border-radius: 4px;
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+  border: 2px solid rgba(14,28,58,0.2);
+}
+
+.cf-check-wrap input[type=checkbox]:checked {
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+  accent-color: white;
+}
+
+.cf-check-wrap input[type=checkbox]:focus {
+  outline: 2px solid rgba(61,142,240,0.3);
+  outline-offset: 2px;
 }
 
 .cf-check-label {
@@ -703,6 +717,14 @@
 .cf-check-label a {
   color: var(--cyan);
   text-decoration: underline;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .cf-btn-enviar {
