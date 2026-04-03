@@ -281,18 +281,27 @@ section    { padding:110px 5%; }
 
 /* ── Boton de Whatsapp ── */
 .whatsapp {
-  position:fixed;
-  width:70px;
-  height:70px;
-  bottom:90px;
-  right:75px;
-  background-color:#25d366;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  font-size:42px;
-  z-index:100;
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 90px;
+  right: 75px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 42px;
+  z-index: 100;
+  transition: all 0.3s ease;
+  animation: pulse 1s infinite alternate; /* animación siempre activa */
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6); /* sombra fija */
 }
+
 .whatsapp-icon {
-  margin-top:13px;
+  margin-top: 13px;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); } /* pulso suave */
 }

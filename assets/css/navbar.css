@@ -11,7 +11,7 @@
    3. Una sola barra, layout limpio
 ═══════════════════════════════════════════════ */
 
-nav {
+#navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -19,8 +19,8 @@ nav {
   z-index: 100;
   min-height: 115px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
   padding: 0 5%;
   background: #061226;
   box-sizing: border-box;
@@ -43,6 +43,8 @@ nav.scrolled {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  margin-right: 2.5rem;
+  overflow: visible;
   text-decoration: none;
 }
 
@@ -55,7 +57,7 @@ nav.scrolled {
   */
   height: 56px;
   width: auto;
-  max-width: 240px;
+  max-width: none;
   object-fit: contain;
   object-position: left center;
   display: block;
@@ -68,14 +70,22 @@ nav.scrolled {
 /* ── Links — centrados ── */
 .nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
-  flex: 1;
+  flex: 1 1 0%;
   flex-wrap: nowrap;
   list-style: none;
   margin: 0;
   padding: 0;
+  /* Solo visible en escritorio */
+  position: static;
+  background: none;
+  height: auto;
+  box-shadow: none;
+  border: none;
+  z-index: auto;
+  overflow: visible;
 }
 
 /* IMPORTANTE: no debe haber ningún elemento que no sea <li> dentro del <ul> */
@@ -95,8 +105,8 @@ nav.scrolled {
 }
 
 .nav-links a:hover {
-  color: white;
-  background: rgba(255,255,255,0.07);
+  color: var(--navy);
+  background: white;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 4px 16px rgba(0,0,0,0.18);
 }
 
@@ -258,14 +268,14 @@ nav.scrolled {
 .logout-btn:hover { background: rgba(240,112,112,0.1) !important; }
 
 /* ── Auth-nav (páginas login/register — solo logo) ── */
-nav.auth-nav {
+#navbar.auth-nav {
   background: rgba(7,15,32,0.98) !important;
   backdrop-filter: blur(24px);
   justify-content: center;
 }
-nav.auth-nav .nav-links     { display: none !important; }
-nav.auth-nav .nav-auth      { display: none !important; }
-nav.auth-nav .nav-hamburger { display: none !important; }
+#navbar.auth-nav .nav-links     { display: none !important; }
+#navbar.auth-nav .nav-auth      { display: none !important; }
+#navbar.auth-nav .nav-hamburger { display: none !important; }
 
 /* ── Hamburger móvil ── */
 .nav-hamburger {
@@ -290,7 +300,7 @@ nav.auth-nav .nav-hamburger { display: none !important; }
 /* ── RESPONSIVE MÓVIL (Ajustado para replicar Imagen 3) ── */
 @media (max-width: 900px) {
   /* 1. Ajuste General del Navbar Base */
-  nav {
+  #navbar {
     min-height: 80px; /* Reducimos la altura en móvil para que no ocupe tanto */
     display: flex;
     justify-content: space-between; /* Logo a la izquierda, hamburguesa a la derecha */
@@ -303,7 +313,7 @@ nav.auth-nav .nav-hamburger { display: none !important; }
   }
 
   /* 2. Ocultamos el contenedor de auth base (el que está en el grid) */
-  nav > .nav-auth { display: none; }
+  #navbar > .nav-auth { display: none; }
 
   /* 3. Estilo del Menú Desplegable (Glassmorphism premium) */
   .nav-links {
@@ -375,9 +385,9 @@ nav.auth-nav .nav-hamburger { display: none !important; }
 
 /* Ajustes extra para móviles muy pequeños */
 @media (max-width: 480px) {
-  nav { min-height: 70px; }
+  #navbar { min-height: 70px; }
   .nav-links { top: 70px; height: calc(100vh - 70px); }
-  .nav-logo-img { height: 32px; max-width: 110px; }
+  .nav-logo-img { height: 32px; max-width: none; }
 }
 
 /* Animación de entrada suave para el menú móvil */
