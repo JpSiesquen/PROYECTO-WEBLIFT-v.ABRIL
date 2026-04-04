@@ -543,7 +543,8 @@
 @media (max-width: 768px) {
   section { padding: 80px 5%; }
   .hero-btns { flex-direction: column; align-items: flex-start; }
-  .logos-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .logos-list  { gap: 1.25rem; }
+  .logos-inner { flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
+  .logos-label { width: 100%; text-align: center; }
+  .logos-list  { gap: 1.25rem; justify-content: center; width: 100%; }
   .founder-avatar-wrap { flex-direction: column; }
 }
