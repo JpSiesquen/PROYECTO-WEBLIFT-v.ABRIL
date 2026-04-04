@@ -521,6 +521,11 @@
   .hero-desc { margin-bottom: 1.4rem; line-height: 1.65; }  
 }
 
+@media (max-width: 900px) {
+  /* Evita doble sangria horizontal: section (5%) + .container (5%). */
+  .container { padding: 0; }
+}
+
 @media (max-width: 1024px) {
   .hero-content  { grid-template-columns: 1fr; }
   .hero-visual   { display: none; }
