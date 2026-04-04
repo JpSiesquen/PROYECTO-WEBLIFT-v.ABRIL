@@ -1228,8 +1228,25 @@ footer {
   .why-choose-grid { grid-template-columns: 1fr; }
   .testimonials-grid {
     grid-template-columns: 1fr;
-    max-width: 560px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
+    gap: 1rem;
+  }
+  .testi-card {
+    width: 100%;
+    min-width: 0;
+  }
+  .testi-author {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .testi-name {
+    min-width: 0;
+    flex: 1;
+  }
+  .testi-name span {
+    overflow-wrap: anywhere;
   }
 
   .footer-top-bar,
@@ -1244,6 +1261,7 @@ footer {
   .services-grid { grid-template-columns: 1fr; }
   .service-detail-note { flex-direction: column; align-items: center; text-align: center; }
   .about-cta { padding: 1.5rem; }
+  .testi-card { padding: 1.5rem; }
 }
 
   
