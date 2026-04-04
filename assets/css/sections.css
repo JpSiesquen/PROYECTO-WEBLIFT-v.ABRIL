@@ -1226,6 +1226,13 @@ footer {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .mission-vision-grid { grid-template-columns: 1fr; }
   .why-choose-grid { grid-template-columns: 1fr; }
+
+  .footer-top-bar,
+  .footer-nav-row,
+  .footer-bottom-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 @media (max-width: 640px) {

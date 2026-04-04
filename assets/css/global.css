@@ -312,6 +312,29 @@ section    { padding:110px 5%; }
 }
 
 @media (max-width: 900px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+
+  body {
+    position: relative;
+  }
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .container {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .cursor,
   .cursor-ring {
     display: none !important;
