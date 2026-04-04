@@ -1226,6 +1226,7 @@ footer {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .mission-vision-grid { grid-template-columns: 1fr; }
   .why-choose-grid { grid-template-columns: 1fr; }
+  #contact { padding-left: 16px; padding-right: 16px; }
   .testimonials-grid {
     grid-template-columns: 1fr;
     width: 100%;
@@ -1262,6 +1263,7 @@ footer {
   .service-detail-note { flex-direction: column; align-items: center; text-align: center; }
   .about-cta { padding: 1.5rem; }
   .testi-card { padding: 1.5rem; }
+  #contact { padding: 60px 16px; }
 }
 
   
