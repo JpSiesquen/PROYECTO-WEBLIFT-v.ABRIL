@@ -562,12 +562,12 @@
           <div class="cf-form-row">
             <div class="cf-form-group">
               <label class="cf-label" for="cf-nombre">Nombre completo *</label>
-              <input type="text" id="cf-nombre" name="nombre" class="cf-input" placeholder="Tu nombre completo" autocomplete="name"/>
+              <input type="text" id="cf-nombre" name="nombre" class="cf-input" placeholder="Tu nombre completo" autocomplete="name" maxlength="80"/>
               <span class="cf-field-error" id="error-cf-nombre"></span>
             </div>
             <div class="cf-form-group">
               <label class="cf-label" for="cf-empresa">Empresa / Negocio</label>
-              <input type="text" id="cf-empresa" name="empresa" class="cf-input" placeholder="Nombre de tu empresa (opcional)" autocomplete="organization"/>
+              <input type="text" id="cf-empresa" name="empresa" class="cf-input" placeholder="Nombre de tu empresa (opcional)" autocomplete="organization" maxlength="100"/>
               <span class="cf-field-error" id="error-cf-empresa"></span>
             </div>
           </div>
@@ -575,19 +575,19 @@
           <div class="cf-form-row">
             <div class="cf-form-group">
               <label class="cf-label" for="cf-email">Correo electrónico *</label>
-              <input type="email" id="cf-email" name="email" class="cf-input" placeholder="tucorreo@ejemplo.com" autocomplete="email"/>
+              <input type="email" id="cf-email" name="email" class="cf-input" placeholder="tucorreo@ejemplo.com" autocomplete="email" maxlength="120"/>
               <span class="cf-field-error" id="error-cf-email"></span>
             </div>
             <div class="cf-form-group">
               <label class="cf-label" for="cf-telefono">Teléfono / WhatsApp *</label>
-              <input type="tel" id="cf-telefono" name="telefono" class="cf-input" placeholder="Ej: +51 900 000 000" autocomplete="tel"/>
+              <input type="tel" id="cf-telefono" name="telefono" class="cf-input" placeholder="Ej: +51 900 000 000" autocomplete="tel" maxlength="20" inputmode="tel"/>
               <span class="cf-field-error" id="error-cf-telefono"></span>
             </div>
           </div>
 
           <div class="cf-form-group">
             <label class="cf-label" for="cf-mensaje">Mensaje / Consulta *</label>
-            <textarea id="cf-mensaje" name="mensaje" class="cf-textarea" placeholder="Cuéntanos sobre tu proyecto, qué servicio necesitas o cualquier pregunta que tengas..."></textarea>
+            <textarea id="cf-mensaje" name="mensaje" class="cf-textarea" placeholder="Cuéntanos sobre tu proyecto, qué servicio necesitas o cualquier pregunta que tengas..." maxlength="1000"></textarea>
             <span class="cf-field-error" id="error-cf-mensaje"></span>
           </div>
 

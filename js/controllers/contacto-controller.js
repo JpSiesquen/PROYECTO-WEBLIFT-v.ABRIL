@@ -58,6 +58,9 @@ const ContactoController = {
     if (!nombre?.value.trim()) {
       this.mostrarError("cf-nombre", "Ingresa tu nombre completo.");
       ok = false;
+    } else if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s'-]{2,80}$/.test(nombre.value.trim())) {
+      this.mostrarError("cf-nombre", "El nombre solo puede contener letras y espacios.");
+      ok = false;
     }
 
     // Email
@@ -75,6 +78,15 @@ const ContactoController = {
     if (!telefono?.value.trim()) {
       this.mostrarError("cf-telefono", "Ingresa tu número de teléfono.");
       ok = false;
+    } else if (!/^[0-9+()\s-]{7,20}$/.test(telefono.value.trim())) {
+      this.mostrarError("cf-telefono", "El teléfono solo puede contener números, +, espacios, paréntesis y guiones.");
+      ok = false;
+    } else {
+      const soloDigitos = telefono.value.replace(/\D/g, "");
+      if (soloDigitos.length < 7 || soloDigitos.length > 15) {
+        this.mostrarError("cf-telefono", "Ingresa un número de teléfono válido.");
+        ok = false;
+      }
     }
 
     // Mensaje
@@ -84,6 +96,9 @@ const ContactoController = {
       ok = false;
     } else if (mensaje.value.trim().length < 10) {
       this.mostrarError("cf-mensaje", "El mensaje debe tener al menos 10 caracteres.");
+      ok = false;
+    } else if (mensaje.value.trim().length > 1000) {
+      this.mostrarError("cf-mensaje", "El mensaje no puede superar los 1000 caracteres.");
       ok = false;
     }
 
