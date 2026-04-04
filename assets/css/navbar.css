@@ -292,6 +292,8 @@ nav.scrolled {
     padding: 0 5%;
   }
 
+  .nav-logo { margin-right: 0; }
+
   /* Reducimos el logo un poco más en móvil */
   .nav-logo-img { 
     height: 38px; 
@@ -349,11 +351,15 @@ nav.scrolled {
   }
 
   /* 4. Hamburguesa: la mostramos y ajustamos posición */
-  .nav-hamburger { 
-    display: flex; 
+  .nav-hamburger {
+    display: flex !important;
     position: relative;
     right: 0;
     z-index: 101; /* Siempre sobre el menú desplegable */
+  }
+
+  .nav-hamburger span {
+    background: rgba(240, 247, 255, 0.95);
   }
 
   /* 5. Diseño Auth dentro del menú móvil (Para cuando el usuario NO está logueado) */

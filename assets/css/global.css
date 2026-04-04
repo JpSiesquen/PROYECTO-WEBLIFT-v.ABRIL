@@ -76,6 +76,11 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
+html,
+body {
+  max-width: 100%;
+}
 img  { max-width:100%; height:auto; display:block; }
 a    { text-decoration:none; color:inherit; }
 ul   { list-style:none; }
@@ -304,4 +309,37 @@ section    { padding:110px 5%; }
 @keyframes pulse {
   from { transform: scale(1); }
   to { transform: scale(1.08); } /* pulso suave */
+}
+
+@media (max-width: 900px) {
+  .cursor,
+  .cursor-ring {
+    display: none !important;
+  }
+
+  .whatsapp {
+    width: 58px;
+    height: 58px;
+    right: 14px;
+    bottom: 18px;
+    font-size: 34px;
+  }
+
+  .whatsapp-icon {
+    margin-top: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp {
+    width: 52px;
+    height: 52px;
+    right: 12px;
+    bottom: 14px;
+    font-size: 30px;
+  }
+
+  .whatsapp-icon {
+    margin-top: 10px;
+  }
 }
