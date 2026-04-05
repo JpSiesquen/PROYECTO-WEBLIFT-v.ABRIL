@@ -1,0 +1,58 @@
+# ═══════════════════════════════════════════════
+# WEBLIFT Studio — .gitignore
+# ═══════════════════════════════════════════════
+
+# Documentos privados y análisis internos
+analisis-precios.md
+notas-privadas/
+estrategia-comercial.md
+clientes/
+presupuestos/
+
+# Configuraciones de editores
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Credenciales y configuración sensible
+*.env
+*.env.local
+*.env.production
+.firebase/
+firebase-debug.log
+firebaseConfig.js
+
+# Node modules (por si usas npm en el futuro)
+node_modules/
+package-lock.json
+
+# Logs y debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos temporales y backups
+*.tmp
+*.bak
+*.backup
+temp/
+tmp/
+
+# Archivos de construcción (por si agregas build tools)
+dist/
+build/
+.cache/
+
+# Archivos de prueba locales
+test-local/
+sandbox/
