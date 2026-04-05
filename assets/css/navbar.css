@@ -314,7 +314,7 @@ nav.scrolled {
     background: rgba(6, 18, 38, 0.98); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 3rem 10% 2rem;
+    padding: 1rem 10% 2rem;
     gap: 1rem; /* Gap más pequeño para los links */
     z-index: 99;
     overflow-y: auto; /* Permite scroll si el menú es muy largo */
