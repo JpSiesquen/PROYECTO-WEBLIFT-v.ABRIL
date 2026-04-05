@@ -16,18 +16,6 @@
   background: #061226;
   box-sizing: border-box;
 }
-/*
-nav.scrolled {
-  background: rgba(7,15,32,0.97);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.05);
-}
-*/
-/* Sin .scrolled → transparente sobre el hero */
-/*nav:not(.scrolled) {
-  background: transparent;
-}*/
 
 /* ── Logo ── */
 .nav-logo {
@@ -52,7 +40,7 @@ nav.scrolled {
 
 .nav-logo-img:hover { opacity: 0.85; }
 
-/* ── Links — centrados ── */
+/* ── Links ── */
 .nav-links {
   display: flex;
   justify-content: flex-end;
@@ -63,7 +51,6 @@ nav.scrolled {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* Solo visible en escritorio */
   position: static;
   background: none;
   height: auto;
@@ -73,7 +60,6 @@ nav.scrolled {
   overflow: visible;
 }
 
-/* IMPORTANTE: no debe haber ningún elemento que no sea <li> dentro del <ul> */
 .nav-links li { display: flex; }
 
 .nav-links a {
@@ -282,63 +268,62 @@ nav.scrolled {
   transition: transform 0.3s, opacity 0.3s;
 }
 
-/* ── RESPONSIVE MÓVIL (Ajustado para replicar Imagen 3) ── */
+/* ── RESPONSIVE MÓVIL ── */
 @media (max-width: 900px) {
-  /* 1. Ajuste General del Navbar Base */
   #navbar {
-    min-height: 80px; /* Reducimos la altura en móvil para que no ocupe tanto */
+    min-height: 80px;
     display: flex;
-    justify-content: space-between; /* Logo a la izquierda, hamburguesa a la derecha */
+    justify-content: space-between;
     padding: 0 5%;
   }
 
   .nav-logo { margin-right: 0; }
 
-  /* Reducimos el logo un poco más en móvil */
   .nav-logo-img { 
     height: 38px; 
   }
 
-  /* 2. Ocultamos el contenedor de auth base (el que está en el grid) */
   #navbar > .nav-auth { display: none; }
 
-  /* 3. Estilo del Menú Desplegable (Glassmorphism premium) */
   .nav-links {
-    display: none; /* Oculto por defecto */
+    display: none;
     flex-direction: column;
     position: fixed;
-    top: 80px; /* Alineado con la nueva altura móvil */
+    top: 80px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px); /* Ocupa el resto de la pantalla */
+    height: calc(100vh - 80px);
     background: rgba(6, 18, 38, 0.98); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 0.5rem 10% 2rem;
-    gap: 1.2rem; /* Espaciado aumentado entre links */
+    gap: 1.2rem;
     z-index: 99;
-    overflow-y: auto; /* Permite scroll si el menú es muy largo */
+    overflow-y: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     align-items: flex-start;
     justify-content: flex-start;
   }
 
-  /* Regla que activa el JS al hacer click */
   .nav-links.open {
     display: flex !important;
     animation: fadeInMenu 0.4s ease-out;
   }
 
-  /* Estilo de los links individuales en el menú móvil */
   .nav-links li {
     width: 100%;
     justify-content: flex-start;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03); /* Línea divisoria suave */
-    padding: 0.5rem 0;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 0.8rem 0;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
   }
 
   .nav-links a {
-    font-size: 1.1rem; /* Texto más grande y fácil de tocar */
+    font-size: 1.1rem;
     width: 100%;
     text-align: center;
     color: rgba(200, 212, 232, 0.85);
@@ -349,30 +334,18 @@ nav.scrolled {
   .nav-links a.active {
     background: rgba(255,255,255,0.04);
     color: white;
-    box-shadow: none; /* Quitamos sombras pesadas de escritorio */
+    box-shadow: none;
   }
 
-  /* 4. Hamburguesa: la mostramos y ajustamos posición */
   .nav-hamburger {
     display: flex !important;
     position: relative;
     right: 0;
-    z-index: 101; /* Siempre sobre el menú desplegable */
+    z-index: 101;
   }
 
   .nav-hamburger span {
     background: rgba(240, 247, 255, 0.95);
-  }
-
-  /* 5. Diseño Auth dentro del menú móvil (Para cuando el usuario NO está logueado) */
-  /* Debemos clonar la estructura de auth para que se vea abajo */
-  .nav-links::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: rgba(255,255,255,0.08);
-    margin: 2rem 0;
   }
 }
 
