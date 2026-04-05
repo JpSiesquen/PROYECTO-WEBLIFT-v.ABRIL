@@ -1221,6 +1221,9 @@ footer {
 }
 
 @media (max-width: 900px) {
+  /* ── Compensar altura del navbar fijo (80px) al hacer scroll ── */
+  #about, #services, #pricing, #contact, #process { scroll-margin-top: 80px; }
+
   .benefits-grid, .sectors-grid { grid-template-columns: 1fr; }
   .faq-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1288,6 +1291,12 @@ footer {
   .about-cta { padding: 1.5rem; }
   .testi-card { padding: 1.5rem; }
   #contact { padding: 60px 16px; }
+}
+
+/* ── Pantallas muy pequeñas (Galaxy A51, etc.) ── */
+@media (max-width: 480px) {
+  /* ── Compensar altura del navbar fijo (70px) al hacer scroll ── */
+  #about, #services, #pricing, #contact, #process { scroll-margin-top: 70px; }
 }
 
   

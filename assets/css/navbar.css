@@ -314,11 +314,13 @@ nav.scrolled {
     background: rgba(6, 18, 38, 0.98); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 1rem 10% 2rem;
-    gap: 1rem; /* Gap más pequeño para los links */
+    padding: 0.5rem 10% 2rem;
+    gap: 1.2rem; /* Espaciado aumentado entre links */
     z-index: 99;
     overflow-y: auto; /* Permite scroll si el menú es muy largo */
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   /* Regla que activa el JS al hacer click */
@@ -330,7 +332,7 @@ nav.scrolled {
   /* Estilo de los links individuales en el menú móvil */
   .nav-links li {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03); /* Línea divisoria suave */
     padding: 0.5rem 0;
   }
@@ -377,7 +379,7 @@ nav.scrolled {
 /* Ajustes extra para móviles muy pequeños */
 @media (max-width: 480px) {
   #navbar { min-height: 70px; }
-  .nav-links { top: 70px; height: calc(100vh - 70px); }
+  .nav-links { top: 70px; height: calc(100vh - 70px); padding: 0.5rem 10% 2rem; gap: 1.2rem; align-items: flex-start; justify-content: flex-start; }
   .nav-logo-img { height: 32px; max-width: none; }
 }
 
