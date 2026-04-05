@@ -21,24 +21,35 @@
 const ContactoService = {
 
   /**
+   * Sanitiza texto para prevenir inyección de HTML/JavaScript
+   * @param {string} text - Texto a sanitizar
+   * @returns {string} Texto sanitizado (caracteres especiales escapados)
+   */
+  sanitizeHTML(text) {
+    const map = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    };
+    return String(text).replace(/[&<>"']/g, m => map[m]);
+  },
+
+  /**
    * Guarda una nueva consulta en Firestore
    * @param {Object} datos - Campos del formulario
    * @returns {Promise<string>} ID del documento creado
    */
   async guardar(datos) {
     const consulta = {
-      // Datos del visitante
-      nombre:    datos.nombre.trim(),
-      email:     datos.email.trim().toLowerCase(),
-      telefono:  datos.telefono?.trim() || "",
-      empresa:   datos.empresa?.trim()  || "",
-      mensaje:   datos.mensaje.trim(),
-
-      // Aceptación de términos
+      nombre:    this.sanitizeHTML(datos.nombre.trim()),
+      email:     this.sanitizeHTML(datos.email.trim().toLowerCase()),
+      telefono:  this.sanitizeHTML(datos.telefono?.trim() || ""),
+      empresa:   this.sanitizeHTML(datos.empresa?.trim()  || ""),
+      mensaje:   this.sanitizeHTML(datos.mensaje.trim()),
       terminosAceptados: true,
-
-      // Metadatos automáticos
-      estado:    "nuevo",        // nuevo | leído | respondido
+      estado:    "nuevo",
       creadoEn:  firebase.firestore.FieldValue.serverTimestamp(),
       fechaStr:  new Date().toLocaleDateString("es-PE", {
         year: "numeric", month: "long", day: "numeric",
@@ -51,3 +62,5 @@ const ContactoService = {
     return docRef.id;
   }
 };
+
+console.log("✅ ContactoService con sanitización HTML activa");

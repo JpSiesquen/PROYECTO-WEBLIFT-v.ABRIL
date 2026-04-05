@@ -304,35 +304,6 @@
 }
 .value-text strong { display:block; font-size:0.9rem; font-weight:600; color:var(--ink); margin-bottom:0.2rem; }
 .value-text span   { font-size:0.82rem; color:var(--text-secondary); }
-
-/* ── FOUNDER SECTION ── */
-#founder {
-  background: var(--ink-deep);
-  position: relative;
-  overflow: hidden;
-}
-
-#founder::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    radial-gradient(ellipse 60% 70% at 85% 50%, rgba(61,142,240,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 5% 90%, rgba(20,39,79,0.6) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-#founder::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(61,142,240,0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(61,142,240,0.025) 1px, transparent 1px);
-  background-size: 52px 52px;
-  pointer-events: none;
-}
-
-.founder-grid {
   position: relative; z-index: 1;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -477,42 +448,7 @@
   opacity: 0.7;
 }
 
-/* CTA Founder */
-.founder-cta {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
 
-.btn-linkedin {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(10,102,194,0.15);
-  border: 1px solid rgba(10,102,194,0.35);
-  color: #6fb5ff;
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--radius-sm);
-  transition: all var(--t);
-}
-.btn-linkedin:hover {
-  background: rgba(10,102,194,0.28);
-  border-color: rgba(10,102,194,0.6);
-  color: white;
-  transform: translateY(-1px);
-}
-
-.founder-quote {
-  font-size: 0.85rem;
-  color: rgba(200,212,232,0.4);
-  font-style: italic;
-  font-family: var(--font-display);
-}
 
 /* Responsive */
 @media (max-height: 820px) and (min-width: 1025px) {
@@ -525,7 +461,7 @@
 
 @media (max-width: 900px) {
   /* ── Compensar altura del navbar fijo (80px) al hacer scroll ── */
-  #about, #founder { scroll-margin-top: 80px; }
+  #about { scroll-margin-top: 80px; }
   
   /* Evita doble sangria horizontal: section (5%) + .container (5%). */
   .container { padding: 0; }
@@ -535,12 +471,6 @@
   .hero-content  { grid-template-columns: 1fr; }
   .hero-visual   { display: none; }
   .about-grid    { grid-template-columns: 1fr; gap: 3rem; }
-  .founder-grid  { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
-  .founder-avatar-wrap { flex-direction: row; justify-content: center; }
-  .founder-label { justify-content: center; }
-  .founder-skills { justify-content: center; }
-  .founder-cta   { justify-content: center; }
-  .founder-content { padding-right: 0; }
 }
 
 @media (max-width: 768px) {
@@ -549,10 +479,9 @@
   .logos-inner { flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
   .logos-label { width: 100%; text-align: center; }
   .logos-list  { gap: 1.25rem; justify-content: center; width: 100%; }
-  .founder-avatar-wrap { flex-direction: column; }
 }
 
 /* Pantallas muy pequeñas (Galaxy A51, etc.) */
 @media (max-width: 480px) {
-  #about, #founder { scroll-margin-top: 70px; }
+  #about { scroll-margin-top: 70px; }
 }

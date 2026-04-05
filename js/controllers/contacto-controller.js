@@ -53,7 +53,6 @@ const ContactoController = {
   validar() {
     let ok = true;
 
-    // Nombre
     const nombre = document.getElementById("cf-nombre");
     if (!nombre?.value.trim()) {
       this.mostrarError("cf-nombre", "Ingresa tu nombre completo.");
@@ -63,7 +62,6 @@ const ContactoController = {
       ok = false;
     }
 
-    // Email
     const email = document.getElementById("cf-email");
     if (!email?.value.trim()) {
       this.mostrarError("cf-email", "Ingresa tu correo electrónico.");
@@ -73,7 +71,6 @@ const ContactoController = {
       ok = false;
     }
 
-    // Teléfono
     const telefono = document.getElementById("cf-telefono");
     if (!telefono?.value.trim()) {
       this.mostrarError("cf-telefono", "Ingresa tu número de teléfono.");
@@ -89,7 +86,6 @@ const ContactoController = {
       }
     }
 
-    // Mensaje
     const mensaje = document.getElementById("cf-mensaje");
     if (!mensaje?.value.trim()) {
       this.mostrarError("cf-mensaje", "Escribe tu consulta o mensaje.");
@@ -102,7 +98,6 @@ const ContactoController = {
       ok = false;
     }
 
-    // Términos y condiciones
     const terminos = document.getElementById("cf-terminos");
     if (!terminos?.checked) {
       this.mostrarError("cf-terminos", "Debes aceptar los términos y condiciones.");
