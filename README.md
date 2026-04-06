@@ -1,33 +1,82 @@
-# 🌐 WEBLIFT Studio
+<div align="center">
 
-✨ Bienvenido a **WEBLIFT Studio**, la agencia digital que impulsa tu presencia en línea.  
-Creamos experiencias web modernas, contenido atractivo y estrategias de marketing que elevan tu marca.
+# 🚀 WEBLIFT Studio
 
----
+### ✨ *Elevamos tu presencia digital al siguiente nivel* ✨
 
-## 🚀 Servicios
-💻 **Páginas web simples** → Landing pages rápidas y efectivas  
-🏢 **Sitios empresariales** → Estructura profesional y escalable  
-🎨 **Diseño de logos y branding** → Identidad visual única  
-📝 **Creación de contenido digital** → Textos, imágenes y campañas optimizadas  
-📢 **Publicidad y marketing online** → Estrategias para aumentar tu visibilidad  
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
----
-
-## 🛠️ Tecnologías utilizadas
-🔧 **Frontend:** HTML5, CSS3, JavaScript  
-🎨 **Diseño:** Figma, Canva  
-📈 **Marketing:** SEO básico, redes sociales  
+</div>
 
 ---
 
-## 📧 Contacto
-📩 ¿Quieres impulsar tu negocio con WEBLIFT Studio?  
-- Email: contacto@weblift.com  
-- GitHub: [WEBLIFT](https://github.com/WEBLIFT)  
-- LinkedIn: *(agrega tu perfil profesional si lo tienes)*  
+## 🎯 ¿Qué hacemos?
+
+Somos una **agencia digital creativa** que transforma ideas en experiencias web impactantes.  
+Diseñamos, creamos y optimizamos tu presencia online para que tu marca brille. 🌟
 
 ---
 
-## Cibertec
-Proyecto creado por alumnos del Instituto Superior Tecnológico Cibertec.
+## 💼 Nuestros Servicios
+
+| Servicio | Descripción | Icono |
+|----------|-------------|-------|
+| **Landing Pages** | Páginas rápidas y efectivas que convierten | 💻 |
+| **Sitios Empresariales** | Estructura profesional y escalable | 🏢 |
+| **Branding & Logos** | Identidad visual única para tu marca | 🎨 |
+| **Contenido Digital** | Textos, imágenes y videos optimizados | 📝 |
+| **Marketing Online** | Estrategias que aumentan tu visibilidad | 📢 |
+| **SEO & Analytics** | Mejora tu posicionamiento web | 📈 |
+
+---
+
+## 🛠️ Stack Tecnológico
+
+### Frontend
+🎨 **HTML5** • **CSS3** • **JavaScript**  
+⚡ Diseño responsive y moderno  
+🔥 Integración con Firebase Firestore
+
+### Diseño & Marketing
+🖌️ **Figma** • **Canva**  
+📊 SEO básico y estrategias de contenido  
+📱 Optimización para redes sociales
+
+---
+
+## 🌈 Características
+
+✅ Diseño moderno y atractivo  
+✅ 100% Responsive (móvil, tablet, desktop)  
+✅ Formularios de contacto funcionales  
+✅ Optimizado para rendimiento  
+✅ Fácil mantenimiento  
+✅ Compatible con todos los navegadores  
+
+---
+
+## 📬 Contacto
+
+¿Listo para llevar tu negocio al siguiente nivel? 🚀  
+
+📧 Usa nuestro **formulario de contacto** en la web  
+💼 Síguenos en redes sociales  
+🌐 Visita nuestra página principal
+
+---
+
+<div align="center">
+
+### 🎓 Proyecto Académico
+
+Desarrollado con 💙 por estudiantes de  
+**Instituto Superior Tecnológico Cibertec**
+
+---
+
+⭐ Si te gusta este proyecto, dale una estrella ⭐
+
+</div>
