@@ -85,6 +85,24 @@
   box-shadow: 0 6px 18px rgba(61, 142, 240, 0.18);
 }
 
+@media (min-width: 1025px) {
+  .legal-page__heading {
+    font-size: 2.2rem;
+  }
+
+  .legal-page__intro {
+    font-size: 0.96rem;
+  }
+
+  .legal-card__item h2 {
+    font-size: 1.28rem;
+  }
+
+  .legal-card__item p {
+    font-size: 0.96rem;
+  }
+}
+
 @media (max-width: 900px) {
   #navbar .nav-auth {
     margin-left: 0;
