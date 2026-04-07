@@ -1,5 +1,5 @@
-/* ═══════════════════════════════════════════════════════════
-   WEBLIFT Studio — js/ui/animations.js (CORREGIDO)
+/*
+   WEBLIFT Agency — js/ui/animations.js (CORREGIDO)
    
   CORRECCIÓN CRÍTICA: eliminado el DOMContentLoaded duplicado
   que causaba doble inicialización y errores en páginas donde

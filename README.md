@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 WEBLIFT Studio
+# 🚀 WEBLIFT Agency
 
 ### ✨ *Elevamos tu presencia digital al siguiente nivel* ✨
 

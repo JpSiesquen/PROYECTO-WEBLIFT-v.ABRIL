@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   WEBLIFT Studio — js/services/contacto-service.js
+   WEBLIFT Agency — js/services/contacto-service.js
    
    Guarda consultas en Firestore sin requerir autenticación.
    Colección: "contactos"

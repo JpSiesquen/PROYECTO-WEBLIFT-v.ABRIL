@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   WEBLIFT Studio — js/controllers/contacto-controller.js
+   WEBLIFT Agency — js/controllers/contacto-controller.js
    
    Maneja el formulario de contacto público.
    SIN autenticación — cualquier visitante puede enviar.

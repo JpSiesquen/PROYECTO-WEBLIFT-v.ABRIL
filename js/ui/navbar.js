@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   WEBLIFT Studio — js/ui/navbar.js (VERSIÓN FINAL OPTIMIZADA)
+   WEBLIFT Agency — js/ui/navbar.js (VERSIÓN FINAL OPTIMIZADA)
 ═══════════════════════════════════════════════════════════ */
 
 const NavbarUI = {

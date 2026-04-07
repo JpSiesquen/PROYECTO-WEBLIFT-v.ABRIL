@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   WEBLIFT Studio — js/ui/main.js (CORREGIDO)
+   WEBLIFT Agency — js/ui/main.js (CORREGIDO)
    
    Punto central de inicialización. UN SOLO DOMContentLoaded.
    Todos los módulos se inicializan aquí con checks seguros.

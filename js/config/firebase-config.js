@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   WEBLIFT Studio — js/config/firebase-config.js
+   WEBLIFT Agency — js/config/firebase-config.js
    
    SIN autenticación — solo Firestore para el
    formulario de contacto público.

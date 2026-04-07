@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   WEBLIFT Studio — js/ui/intro.js (CORREGIDO)
+   WEBLIFT Agency — js/ui/intro.js (CORREGIDO)
    
    CORRECCIÓN: temporizador sincronizado con el redirect del index.
    - La animación dura ~2.8s
