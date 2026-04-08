@@ -7,7 +7,7 @@
   var waNumber = [p1, p2, p3, p4].join("");
 
   var waMessageMobile = [
-    "Hola", "equipo", "de", "WEBLIFT", "Agency", "👋", "Quiero", "cotizar", "una", "web", "para", "mi", "negocio.", "¿Me", "comparten", "opciones,", "tiempos", "y", "precio", "aproximado?"
+    "Hola", "equipo", "de", "WEBLIFT", "Agency",":)", "Quiero", "cotizar", "una", "web", "para", "mi", "negocio.", "¿Me", "comparten", "opciones,", "tiempos", "y", "precio", "aproximado?"
   ].join(" ");
 
   var waMessageDesktop = [
